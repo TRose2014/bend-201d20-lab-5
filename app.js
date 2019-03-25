@@ -35,8 +35,6 @@ function multiply(a, b) { //eslint-disable-line
   var prodArray = [prodTotal, 'The product of ' + a + ' and ' + b + ' is ' + prodTotal + '.'];
   return(prodArray);
 }
-
-
 // Here is the test for multiply(); uncomment it to run it
 testMultiply(5,9);
 
@@ -135,11 +133,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  var multOfArray = 0;
+  var multProblemFive = [];
+
+  multOfArray = multiply(multArr[0], multArr[1])[0];
+  multOfArray = multiply(multOfArray, multArr[2])[0];
+
+  multProblemFive.push(multOfArray);
+  multProblemFive.push('The numbers ' + multArr[0] + ',' +  multArr[1] + ',' + multArr[2] + ' have a product of ' + multProblemFive[0] + '.');
+  return multProblemFive;
 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
